@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: restful
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+jwt:
+  secret: lhpSmuTbJAd4dBDVnCYWVpjwxOcoRrvYIusztOCiNmH
+  accessTokenExpiration: 30M
+  refreshTokenExpiration: 14D
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    enabled: true
+  api-docs:
+    path: /api-docs
+    enabled: true
