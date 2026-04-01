@@ -1,5 +1,8 @@
 package com.bootcamp.restful.global.response;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public record FieldViolation(
         String field,
         String message
