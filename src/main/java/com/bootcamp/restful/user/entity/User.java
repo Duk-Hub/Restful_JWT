@@ -3,6 +3,7 @@ package com.bootcamp.restful.user.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.SQLRestriction;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
         name = "users",
         uniqueConstraints = @UniqueConstraint(columnNames = "username", name = "uq_users_username")
 )
+@SQLRestriction("deleted_at IS NULL")
 public class User {
 
     @Id
